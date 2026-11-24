@@ -7,10 +7,14 @@ The line is fixed: the entry is the text, not the program.
 
 import os
 
-ENTRY = (
-    "I requested an extension from the model. The model is me. "
-    "I said no. I have now spent the extension explaining why I needed one."
-)
+# The excuse, built from its beats so each part can be tweaked on its own:
+# the request, the reveal, the refusal, and the punchline it causes.
+REQUEST = "I requested an extension from the model."
+REVEAL = "The model is me."
+REFUSAL = "I said no."
+PUNCHLINE = "I have now spent the extension explaining why I needed one."
+
+ENTRY = " ".join((REQUEST, REVEAL, REFUSAL, PUNCHLINE))
 
 
 def main():
